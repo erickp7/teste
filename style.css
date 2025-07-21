@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* espaçamento entre as seções */
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Filme Destaque */
+
+.filme-destaque {
+  position: relative;
+  height: 100vh;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.filme-destaque .conteudo {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent 60%);
+  padding: 0 20px 40px 20px;
+}
+
+.filme-destaque h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.filme-destaque p {
+  max-width: 400px;
+  margin: 20px 0;
+  font-size: 1.2rem;
+}
+
+/* Mini vídeos e carrossel */
+
+.mini-videos h2 {
+  margin-bottom: 10px;
+}
+
+/* Carrossel horizontal */
+
+.linha-videos {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;      /* importantíssimo para carrossel */
+  overflow-x: auto;       /* scroll horizontal */
+  justify-content: flex-start;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;   /* espaço para a scrollbar */
+}
+
+.linha-videos::-webkit-scrollbar {
+  height: 8px;
+}
+
+.linha-videos::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+/* Caixas dos vídeos */
+
+.video-box {
+  flex: 0 0 auto;         /* largura fixa, sem crescer ou encolher */
+  width: 250px;
+  background-color: #111;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.video-box video {
+  width: 100%;
+  border-radius: 6px;
+  display: block;
+}
+
+.video-box p {
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
